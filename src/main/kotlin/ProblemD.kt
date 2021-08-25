@@ -5,16 +5,16 @@ class ProblemD {
 
         for (n in 1..t) {
             var price = 0L
-            val client = readInt()
-            val money = readLongArray(client)
+            val allClients = readInt()
+            val money = readLongArray(allClients)
             money.sort()
-            var n = 0
+            var client = 0
 
             for (i in money) {
-                val newPrice = i * (client - n)
-                n++
+                val newPrice = i * (allClients - client)
+                client++
                 if (newPrice > price) {
-                    price = newPrice.toLong()
+                    price = newPrice
                 }
             }
             println(price)

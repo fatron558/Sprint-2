@@ -7,7 +7,7 @@ class ProblemC {
 
         arr.sort()
 
-        for (i in 0..t - 1 step 2) {
+        for (i in 0 until t step 2) {
             if (arr[i] != arr[i + 1]) {
                 result += arr[i + 1] - arr[i]
             }
